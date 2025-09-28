@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>✨ Modern To-Do</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <div class="task-input">
+      <input type="text" id="taskText" placeholder="Add a new task..." />
+      <select id="taskCategory">
+        <option>General</option>
+        <option>Work</option>
+        <option>Personal</option>
+        <option>Study</option>
+      </select>
+      <input type="date" id="taskDate" />
+      <button id="addTask">➕</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="All" class="active">All</button>
+      <button data-filter="Active">Active</button>
+      <button data-filter="Completed">Completed</button>
+      <button data-filter="General">General</button>
+      <button data-filter="Work">Work</button>
+      <button data-filter="Personal">Personal</button>
+      <button data-filter="Study">Study</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

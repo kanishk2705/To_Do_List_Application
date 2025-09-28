@@ -1,0 +1,137 @@
+:root {
+  --bg: #f3f4f6;
+  --text: #111;
+  --card: #fff;
+  --primary: #3b82f6;
+}
+
+.dark {
+  --bg: #111827;
+  --text: #f9fafb;
+  --card: #1f2937;
+  --primary: #2563eb;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+header button {
+  border: none;
+  background: var(--card);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task-input {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.task-input input,
+.task-input select,
+.task-input button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.task-input button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filters button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--card);
+  cursor: pointer;
+}
+
+.filters button.active {
+  background: var(--primary);
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.01);
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.badge {
+  margin-left: 8px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  border-radius: 12px;
+}
+
+.badge.warning {
+  background: #fde047;
+  color: #854d0e;
+}
+
+.badge.danger {
+  background: #fca5a5;
+  color: #7f1d1d;
+}
+
+li button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: red;
+}
